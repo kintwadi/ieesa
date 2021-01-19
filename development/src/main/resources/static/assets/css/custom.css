@@ -1,0 +1,110 @@
+.bg-login-image {
+  background-image: url(../img/1.jpg) !important;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-password-image {
+  background: url(../img/3.jpg) !important;
+  background-position: center;
+  background-size: cover;
+}
+.border-left-success {
+  border-left: 0.25rem solid #016593 !important;
+}
+
+.text-success {
+  color: #016593 !important;
+}
+
+a.text-success:hover, a.text-success:focus {
+  color: #016593 !important;
+}
+
+
+.border-left-info {
+  border-left: 0.25rem solid #016593 !important;
+}
+
+.text-info {
+  color: #016593 !important;
+}
+
+a.text-info:hover, a.text-success:focus {
+  color: #016593 !important;
+}
+.bg-info{
+  background-color: #016593 !important;
+}
+
+.border-left-warning {
+  border-left: 0.25rem solid #016593 !important;
+}
+
+.text-warning {
+  color: #016593 !important;
+}
+
+a.text-warning:hover, a.text-warning:focus {
+  color: #016593 !important;
+}
+
+.bg-warning{
+  background-color: #016593 !important;
+}
+.ocultar{
+  display: none;
+}
+
+
+.c{
+  text-align: center !important;
+}
+
+#accordionSidebar.navbar-nav{
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+body.bg-gradient-primary{
+  background-image: url(../img/bg-1.jpg) !important;
+  background-position: center;
+  background-size: cover;
+}
+.card-body a{
+  margin-bottom: 10px !important;
+}
+
+.sidebar-brand img{
+  width: 100% !important;
+}
+
+.tr{
+  text-align: center;
+  color: 000;
+}
+
+#formAdd strong, #formAdd .eror{
+  color: red;
+}
+#formAdd .erro{
+  border-color: red;
+}
+#formAdd .sucesso{
+  border-color: green;
+}
+thead{
+  background-color: #016593;
+  color: #fff;
+}
+
+.btn-sm strong{
+  color: #fff !important;
+}
+.none{
+  display: none;
+}
+.bg-gradient-default{
+  background-color: #fbfbfb;
+}

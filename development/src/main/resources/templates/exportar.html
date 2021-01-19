@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head th:insert="links :: header_links">
+
+<meta charset="utf-8">
+<link th:href="@{/assets/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/fontawesome-free/css/all.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/css/sb-admin-2.min.css}" rel="stylesheet">
+<link th:href="@{/assets/css/custom.css}" rel="stylesheet">
+<link th:href="@{/assets/css/sweetalert2.min.css}" rel="stylesheet">
+<link th:href="@{/assets/css/print.css}" rel="stylesheet">
+<link th:href="@{/assets/datatables/dataTables.bootstrap4.min.css}"
+	rel="stylesheet">
+<link th:href="@{/assets/fontawesome-free/all.css}" rel="stylesheet">
+<title>Report</title>
+<style>
+.center {
+	margin: auto;
+	width: 50%;
+}
+</style>
+</head>
+
+<body>
+	<a th:href="@{atualizar_membros}" id="voltar"><i class="fa fa-arrow-left"></i>
+		Voltar</a>
+	<div id="report" class="center">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3>IGREJA EVANGÉLICA DO ESPÍRITO SANTO EM ANGOLA</h3>
+					<br>
+					<h4>DADOS DO MEMBRO</h4>
+					<div >
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Nome</th>
+									<th>Data de nascimento</th>
+									<th>Apelido</th>
+									<th>Provincia</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td id="name"></td>
+									<td id="dataNascimento"></td>
+									<td id="apelido"></td>
+									<td id="provincia"></td>
+								</tr>
+								<tbody>
+						</table>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Nivel academico</th>
+									<th>Natural</th>
+									<th>Profissão</th>
+									<th>Ocupação</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td id="habilitacaoLiteraria"></td>
+									<td id="natural"></td>
+									<td id="profisao"></td>
+									<td id="ocupacao"></td>
+								</tr>
+								<tbody>
+						</table>
+						
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Endereço</th>
+									<th>Casa № </th>
+									<th>Telefone</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td id="endereco"></td>
+									<td id="numeroCasa"></td>
+									<td id="telefone"></td>
+								</tr>
+								<tbody>
+						</table>
+						
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>№ Bilhete</th>
+									<th>Emitido aos</th>
+									<th>Casado desde</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									
+									<td id="numeroBi"></td>
+									<td id="dataEmissao"></td>
+									<td id="dataCasamento"></td>
+								</tr>
+								<tbody>
+						</table>
+						  <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Estado civil</th>
+                                        <th>Genero</th>
+                                        <th>Pai</th>
+										<th>Mãe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="estadoCivil"></td>
+                                        <td id="genero"></td>
+                                        <td id="pai"></td>
+										<td id="mae"></td>
+                                    </tr>
+                                    
+                                </tbody>
+                          </table>
+                          
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Igreja</th>
+                                        <th>Função na igreja</th>
+                                        <th>Data de ingresso</th>
+										<th>Desde</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="igreja"></td>
+                                        <td id="funcaoIgreja"></td>
+                                        <td id="dataIngresso"></td>
+										<td id="desde"></td>
+                                    </tr>
+                                    
+                                </tbody>
+                          </table>
+                          
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Despacho</th>
+                                        <th>Direção de alocação</th>
+                                        <th>Categoria</th>
+										<th>Data de baptismo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="despacho"></td>
+                                        <td id="direcaoAlocacao"></td>
+                                        <td id="categoria"></td>
+										<td id="dataBaptismo"></td>
+                                    </tr>
+                                    
+                                </tbody>
+                          </table>
+                          
+                          <table class="table table-bordered ">
+							 <thead>
+                                 <tr>
+                                     <th>Padrinho</th>
+                                     <th>Madrinha</th>
+                                  </tr>
+                                </thead>
+							<tbody>
+								<tr>
+									<td id="padrinho"></td>
+									<td id="madrinha"></td>
+								</tr>
+							</tbody>
+						</table>
+                          
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ <span th:insert="links :: footer_links"></span>
+	<script th:src="@{/assets/jquery/jquery.min.js}"></script>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.min.js}"></script>
+	<script th:src="@{/assets/chart.js/Chart.bundle.min.js}"></script>
+	<script th:src="@{/assets/chart.js/Chart.min.js}"></script>
+	<script th:src="@{/assets/js/format.js}"></script>
+	<script th:src="@{/assets/js/render.js}"></script>
+	<script th:src="@{/assets/js/sb-admin-2.js}"></script>
+	<script th:src="@{/assets/js/sweet-alerts.init.js}"></script>
+	<script th:src="@{/assets/js/sweetalert2.min.js}"></script>
+	<script th:src="@{/assets/datatables/jquery.dataTables.js}"></script>
+	<script th:src="@{/assets/datatables/dataTables.bootstrap4.min.js}"></script>
+	<script th:src="@{/assets/js/jquery.mask.js}" ></script>
+	<script th:src="@{/assets/js/print.js}"></script>
+	<script th:src="@{/assets/js/map.js}"></script>
+</body>
+
+</html>

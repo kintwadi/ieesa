@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head th:insert="links :: header_links">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>IEESA - Login</title>
+
+
+
+
+</head>
+
+<body class="bg-gradient-default">
+
+	<div class="container">
+		
+		<!-- Outer Row -->
+		<div class="row justify-content-center">
+
+			<div class="col-xl-5 col-lg-6 col-md-6">
+				<br>
+				<br>
+				<div class="card o-hidden border-0 shadow-lg my-5 tela">
+
+					<div class="card-body p-0">
+						<!-- Nested Row within Card Body -->
+						<div class="row">
+
+							<div class="col-lg-12">
+								<div class="p-5">
+									<br>
+									<br>
+									<div class="text-center">
+										<h1 class="h4 text-gray-900 mb-4">IEESA - LOGIN</h1>
+									</div>
+									<form class="user" th:action="@{/dashboard}" method="post">
+										<div class="form-group">
+											<input type="email" class="form-control form-control-user"
+												id="email" name="email"
+												placeholder="E-mail do administrador">
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control form-control-user"
+												id="pin" name="pin" placeholder="PIN do administrador" disabled="disabled">
+										</div>
+										<input type="checkbox" class="form-group" id="tipo"><span style="font-size:13px"> Acessar como administrador</span>
+										<button class="btn btn-primary btn-user btn-block">
+											LOGIN</button>
+										<hr>
+
+									</form>
+									<span style="color: red" th:text="${login_error}"></span> <br>
+									<br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<span th:insert="links :: footer_links"></span>
+	<script th:src="@{/assets/jquery/jquery.min.js}"></script>
+	<script th:src="@{/assets/bootstrap/js/bootstrap.min.js}"></script>
+	<script th:src="@{/assets/chart.js/Chart.bundle.min.js}"></script>
+	<script th:src="@{/assets/chart.js/Chart.min.js}"></script>
+	<script th:src="@{/assets/js/format.js}"></script>
+	<script th:src="@{/assets/js/render.js}"></script>
+	<script th:src="@{/assets/js/sb-admin-2.js}"></script>
+	<script th:src="@{/assets/js/sweet-alerts.init.js}"></script>
+	<script th:src="@{/assets/js/sweetalert2.min.js}"></script>
+	<script th:src="@{/assets/datatables/jquery.dataTables.js}"></script>
+	<script th:src="@{/assets/datatables/dataTables.bootstrap4.min.js}"></script>
+	<script th:src="@{/assets/js/jquery.mask.js}" type="text/javascript"></script>
+	
+	<script>
+		function check(e){
+			
+			if(e.currentTarget.checked){
+				
+				$('#pin').prop("disabled", false);
+			}else{
+				$('#pin').prop("disabled", true);
+			}
+		}
+		
+		let tipo = document.getElementById("tipo");
+		tipo.addEventListener('change',check);
+		
+	</script>
+
+	<!-- Footer -->
+	<span th:insert="links :: footer"> </span>
+	<!-- End of Footer -->
+
+</body>
+
+</html>
